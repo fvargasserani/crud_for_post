@@ -7,8 +7,7 @@ $(document).ready(function () {
         $.ajax({
             type: "GET",
             url: '/posts/',
-            data: formData,
-            dataType: 'JSON'
+            data: formData
         });
     });
 });
