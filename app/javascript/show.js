@@ -8,8 +8,9 @@ $(document).ready(function () {
         };
         $.ajax({
             type: "GET",
-            url: '/posts/' + id + '/show/',
-            data: formData
+            url: '/posts/' + id,
+            data: formData,
+            dataType: 'text'
         });
     });
 });
