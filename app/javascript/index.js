@@ -1,15 +1,14 @@
 $(document).ready(function () {
-    $("#body").show(function (event) {
-        event.preventDefault();
+    $("#body").show(function () {
         var formData = {
             title: $("#title").val(),
-            content: $("#content").val(),
+            content: $("#content").val()
         };
         $.ajax({
             type: "GET",
-            url: '/',
+            url: '/posts/',
             data: formData,
-            dataType: 'JSON',
+            dataType: 'JSON'
         });
     });
 });

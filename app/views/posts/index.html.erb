@@ -11,14 +11,14 @@
     </tr>
   </thead>
 
-  <tbody id='body'>
+  <tbody id='body', remote: true>
     <% @posts.each do |post| %>
       <tr>
         <td id='title'><%= post.title %></td>
         <td id='content'><%= post.content %></td>
-        <td id='show'><%= link_to 'Show', post %></td>
-        <td id='edit'><%= link_to 'Edit', edit_post_path(post) %></td>
-        <td id='delete'><%= link_to 'Destroy', post, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td id='show'><%= link_to 'Show', post, remote: true %></td>
+        <td id='edit'><%= link_to 'Edit', edit_post_path(post), remote: true %></td>
+        <td id='delete'><%= link_to 'Destroy', post, method: :delete, remote: true %></td>
       </tr>
     <% end %>
   </tbody>

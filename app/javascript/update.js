@@ -3,13 +3,13 @@ $(document).ready(function () {
         event.preventDefault();
         var formData = {
             title: $("#title").val(),
-            content: $("#content").val(),
+            content: $("#content").val()
         };
         $.ajax({
             type: "PUT",
-            url: '/',
+            url: '/posts/',
             data: formData,
-            dataType: 'JSON',
+            dataType: 'JSON'
         });
     });
 });
